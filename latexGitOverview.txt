@@ -1,0 +1,103 @@
+LaTeX
+  What is
+    'Tis not a fetish
+    Document markup language
+      Similarish to how HTML for web
+    Document preparation system
+  Why use
+    Stable
+    Free
+    Available on most operating systems
+  Pros
+    Available on most operating systems
+    Uses text files rather than binary
+      Can be used on source management systems
+        git
+        svn
+        ...
+      Can be developed by multiple people
+        work on different text files
+        compile into one document
+      Can be created on any text editor
+        No restrictions on programs
+        Allows transfer of files
+      Can be created with multiple files included in a main file
+    Can be created and compiled online
+    Math is beautiful
+    Great for dissertations
+  Cons
+    Including graphics/figures can be a little finicky
+      But can be persuaded
+    Not WYSIWYG
+  Basic code
+    \documentclass{}
+      article, report, beamer
+      pt,letterpaper,titlepage/notitlepage,columns
+    \usepackage{}
+      geometry
+      graphicx
+      float
+      parskip
+      hyperref/url
+    \begin{}  \end{}
+      document
+      lists
+        itemize
+        enumerate
+        description
+      figure
+    \chapter{}
+    \section{}
+    \subsection{}
+    \subsubsection{} / \paragraph{}
+    Math
+      eg. $2+2=5$
+  Sample
+    [CODE]
+      \documentclass[12pt]{article}
+      \usepackage{amsmath}
+      \title{\LaTeX}
+      \date{}
+      \begin{document}
+      \maketitle
+      \LaTeX{} is a document preparation system for the \TeX{}
+      typesetting program. It offers programmable desktop publishing
+      features and extensive facilities for automating most aspects of
+      typesetting and desktop publishing, including numbering and
+      cross-referencing, tables and figures, page layout, bibliographies,
+      and much more. \LaTeX{} was originally written in 1984 by Leslie
+      Lamport and has become the dominant method for using \TeX; few
+      people write in plain \TeX{} anymore. The current version is
+      \LaTeXe.
+
+      % This is a comment; it will not be shown in the final output.
+      % The following shows a little of the typesetting power of LaTeX:
+      \begin{align}
+      E &= mc^2                              \\
+           m &= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
+           \end{align}
+           \end{document}
+    [/CODE]
+  Programs
+    Latex packages
+      Linux
+        TeXLive
+        Tetex
+      Mac OS X
+        MacTeX
+      Windows
+        MikTeX
+        ProTeXt
+    IDEs
+      TeXmaker
+      TeXworks
+      Vim/LaTeX-suite
+      Emacs AUCTeX
+    How to compile
+      latex
+        dvi
+      pdflatex
+        pdf
+      latexmk
+        automated compiler
+
