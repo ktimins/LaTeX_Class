@@ -48,3 +48,135 @@
         \item[float] Allows changing the position of a graphic in the document/page
     \end{description}
 }
+
+\subsection{\braceCommand{begin} \&\& \braceCommand{end}}
+
+\frame{\frametitle{\braceCommand{begin} \&\& \braceCommand{end}}
+    Used to start and end \textit{environments} in \LaTeX .\\
+    Some environments that use \braceCommand{begin} and 
+    \braceCommand{end}:
+    \begin{itemize}
+        \item title
+        \item document
+        \item lists
+%        \item figure
+    \end{itemize}
+}
+
+\subsection{Lists}
+
+\frame{\frametitle{Lists}
+    \begin{itemize}
+        \item Lists come in three flavors:
+        \begin{itemize}
+            \item itemize
+            \item enumerate
+            \item description
+        \end{itemize}
+    \end{itemize}
+}
+
+\subsubsection{itemize}
+
+\begin{frame}[fragile]
+\frametitle{itemize}
+\begin{teX}
+\begin{itemize}
+    \item This is a sample list
+    \item to show the code for an itemized list
+    \begin{itemize}
+        \item sublist
+    \end{itemize}
+    \item Another item
+\end{itemize}
+\end{teX}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item This is a sample list
+        \item to show the code for an itemized list
+        \begin{itemize}
+            \item sublist
+        \end{itemize}
+        \item Another item
+   \end{itemize}
+\end{frame}
+
+\subsubsection{enumerate}
+
+\begin{frame}[fragile]
+\frametitle{enumerate}
+\begin{teX}
+\begin{enumerate}
+    \item This is a sample list
+    \item to show the code for an enumerated list
+    \begin{enumerate}
+        \item sublist
+    \end{enumerate}
+    \item Another item
+\end{enumerate}
+\end{teX}
+\end{frame}
+
+\begin{frame}
+\frametitle{enumerate}
+    \begin{enumerate}
+        \item This is a sample list
+        \item to show the code for an enumerated list
+        \begin{enumerate}
+            \item sublist
+        \end{enumerate}
+        \item Another item
+   \end{enumerate}
+\end{frame}
+
+\subsubsection{description}
+
+\begin{frame}[fragile]
+\frametitle{description}
+\begin{teX}
+\begin{description}
+    \item[description] Good for definitions
+    \item[something] This shows a second definition
+\end{description}
+\end{teX}
+\end{frame}
+
+\begin{frame}
+\frametitle{description}
+\begin{description}
+    \item[description] Good for definitions
+    \item[something] This shows a second definition
+\end{description}
+\end{frame}
+
+
+\section{Sectioning}
+
+\begin{frame}
+\frametitle{Sectioning}
+\begin{description}
+    \item[\braceCommand{chapter}] Level 0\\New page\\Only 
+    in books and reports
+    \item[\braceCommand{section}] Level 1\\Same page
+    \item[\braceCommand{subsection}] Level 2\\Same page
+    \item[\braceCommand{subsubsection}] Level 3\\Same page
+\end{description}
+\end{frame}
+
+
+\section{Math}
+
+\begin{frame}
+\frametitle{Math}
+\begin{itemize}
+    \item Math in \LaTeX{} is beautiful.
+    \item Uses the asamath or mathtools package
+    \item Can be sectioned off or inline
+    \item Relation Symbols, Binary Operations, Greek Letters, Set/Logic
+        Notation, Delimiters, Trig Symbols, etc.
+    \item \$\textbackslash{}lim_{x \textbackslash{}to \textbackslash{}infty} \textbackslash{}exp(-x) = 0\$ 
+    $\implies$ $\lim_{x \to \infty} \exp(-x) = 0$
+\end{itemize}
+\end{frame}

@@ -1,4 +1,5 @@
 \documentclass[compress,14pt]{beamer}
+\usepackage{etex}
 \mode<presentation>
 
 \usetheme{Warsaw}
@@ -18,15 +19,46 @@
 
 \usepackage{subfigure}
 \usepackage{multicol}
-%\usepackage{amsmath}
+\usepackage{amsmath}
 \usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage[all,knot]{xy}
 \xyoption{arc}
 \usepackage{url}
 \usepackage{multimedia}
+\usepackage[T1]{fontenc}
+\usepackage{bera}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{listings}
+\usepackage{verbatim}
+%\lstset{%
+%    basicstyle=\small\ttfamily,
+%    language=[LaTeX]{TeX},
+%    xleftmargin=5pt,
+%}
+
+\lstnewenvironment{teX}[1][]
+{\lstset{language=[LaTeX]TeX}\lstset{escapeinside={(*@}{@*)},
+    numbers=left,numberstyle=\normalsize,stepnumber=1,numbersep=5pt,
+    breaklines=true,
+    %firstnumber=last,
+    %frame=tblr,
+    framesep=5pt,
+    basicstyle=\normalsize\ttfamily,
+    showstringspaces=false,
+    keywordstyle=\itshape\color{blue},
+    %identifierstyle=\ttfamily,
+    stringstyle=\color{maroon},
+    commentstyle=\color{black},
+    rulecolor=\color{black},
+    xleftmargin=0pt,
+    xrightmargin=0pt,
+    aboveskip=\medskipamount,
+    belowskip=\medskipamount,
+    backgroundcolor=\color{white}, #1
+                                    }}
+{}
 
 % define your own colours:
 \definecolor{innotek}{RGB}{1,54,160}
@@ -54,6 +86,7 @@
 \def\brackets#1{[#1]}
 \def\braceCommand#1{\textbackslash #1\{\}}
 \def\command#1{\textbackslash #1}
+\def\tab{\hspace{1em}}
 
 \title{Intro to \LaTeX{}}
 \subtitle{Learn to Write Basic \LaTeX{} Documents}
