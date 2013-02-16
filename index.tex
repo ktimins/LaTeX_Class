@@ -26,6 +26,8 @@
 \usepackage[all,knot]{xy}
 \xyoption{arc}
 \usepackage{url}
+\usepackage[hyphens]{url}
+\usepackage[hypertexnames=false, bookmarks=true, bookmarksnumbered=true, breaklinks=true, linkbordercolor={0 0 1}]{hyperref}
 \usepackage{multimedia}
 \usepackage[T1]{fontenc}
 \usepackage{bera}
@@ -33,11 +35,14 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{verbatim}
-%\lstset{%
-%    basicstyle=\small\ttfamily,
-%    language=[LaTeX]{TeX},
-%    xleftmargin=5pt,
-%}
+
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
 
 \lstnewenvironment{teX}[1][]
 {\lstset{language=[LaTeX]TeX}\lstset{escapeinside={(*@}{@*)},
@@ -109,6 +114,12 @@
 
 \section{Basic Code}
 \input{basicCode}
+
+\section{Programs}
+\input{programs}
+
+\section{Conclusion}
+\input{conclusion}
 
 \end{document}
 
