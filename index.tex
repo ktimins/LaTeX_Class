@@ -26,13 +26,10 @@
 \usepackage[all,knot]{xy}
 \xyoption{arc}
 \usepackage{url}
-\usepackage[hyphens]{url}
-\usepackage[hypertexnames=false, bookmarks=true, bookmarksnumbered=true, breaklinks=true, linkbordercolor={0 0 1}]{hyperref}
+%\usepackage[hypertexnames=false, bookmarks=true, bookmarksnumbered=true, breaklinks=true, linkbordercolor={0 0 1}]{hyperref}
 \usepackage{multimedia}
 \usepackage[T1]{fontenc}
 \usepackage{bera}
-\usepackage{hyperref}
-\usepackage{setspace}
 \usepackage{listings}
 \usepackage{verbatim}
 
@@ -93,6 +90,14 @@
 \def\braceCommand#1{\textbackslash #1\{\}}
 \def\command#1{\textbackslash #1}
 \def\tab{\hspace{1em}}
+\AtBeginSection[]{
+    \begin{frame}{Outline}
+        \begin{multicols}{2}
+            \tableofcontents[currentsection,
+                             subsectionstyle=show/show/hide,
+                             subsubsectionstyle=hide/hide]
+        \end{multicols}
+    \end{frame} }
 
 \title{Intro to \LaTeX{}}
 \subtitle{Learn to Write Basic \LaTeX{} Documents}
@@ -102,12 +107,16 @@
 
 \begin{document}
 
-\frame{
+\begin{frame}
     \titlepage
-}
+\end{frame}
 
 \section[Outline]{}
-\frame{\tableofcontents}
+\begin{frame}{Outline}
+    \begin{multicols}{2}
+        \tableofcontents[hideallsubsections]
+    \end{multicols}
+\end{frame}
 
 \section{Overview}
 \input{overview}
