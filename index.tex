@@ -48,7 +48,7 @@
     %firstnumber=last,
     %frame=tblr,
     framesep=5pt,
-    basicstyle=\normalsize\ttfamily,
+    basicstyle=\scriptsize\ttfamily,
     showstringspaces=false,
     keywordstyle=\itshape\color{blue},
     %identifierstyle=\ttfamily,
@@ -62,6 +62,30 @@
     backgroundcolor=\color{white}, #1
                                     }}
 {}
+
+\lstset{
+    language=[LaTeX]TeX,
+    escapeinside={(*@}{@*)},
+    numbers=left,numberstyle=\scriptsize,stepnumber=1,numbersep=5pt,
+    breaklines=true,
+    %firstnumber=last,
+    %frame=tblr,
+    framesep=5pt,
+    basicstyle=\scriptsize\ttfamily,
+    showstringspaces=false,
+    keywordstyle=\itshape\color{blue},
+    %identifierstyle=\ttfamily,
+    stringstyle=\color{maroon},
+    commentstyle=\color{black},
+    rulecolor=\color{black},
+    xleftmargin=0pt,
+    xrightmargin=0pt,
+    aboveskip=\medskipamount,
+    belowskip=\medskipamount,
+    backgroundcolor=\color{white}, #1
+}
+{}
+
 
 % define your own colours:
 \definecolor{innotek}{RGB}{1,54,160}

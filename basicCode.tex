@@ -196,14 +196,28 @@
     \item Can be sectioned off or inline
     \item Relation Symbols, Binary Operations, Greek Letters, Set/Logic
         Notation, Delimiters, Trig Symbols, etc.
-    \item Simple example: \$2+2=5\$ -> $2+2=5$
+    \item Simple example: \$2+2=5\$ $\implies 2+2=5$
 \end{itemize}
 \end{frame}
 
 \subsection{Ex.}
 
-\begin{frame}
+\begin{frame}[allowframebreaks=0.8,fragile]
 \frametitle{Math Ex.}
+\begin{teX}
+\begin{math}
+A_{m,n} =
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+ \end{pmatrix}
+ \end{math}
+\end{teX}
+
+\framebreak
+
 \begin{math}
 A_{m,n} =
  \begin{pmatrix}
@@ -218,12 +232,14 @@ A_{m,n} =
 
 \section{Document Ex.}
 
-\begin{frame}
+\begin{frame}[allowframebreaks=0.8,fragile]
 \frametitle{Document Ex.}
+\lstinputlisting{docEx.tex}
+\framebreak
 \begin{figure}[DocEx] 
   \begin{centering}
-  \includegraphics[bb= 111 89 500 621, crop=true, 
-                 height=1.3\textheight]{docEx.pdf}
+  \includegraphics[crop=true, 
+                 height=\textheight]{docEx.pdf}
   \caption{Example Document}
   \end{centering}
 \end{figure}
