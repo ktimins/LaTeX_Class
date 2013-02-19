@@ -13,4 +13,5 @@ docEx.ps: docEx.tex
 	latexmk -ps docEx.tex
 	sed '2 i %%BoundingBox: 111 89 500 621' docEx.ps > docEx1.ps
 	ps2pdf docEx1.ps docEx.pdf
+	rm docEx1.ps docEx.ps
 	latexmk -c

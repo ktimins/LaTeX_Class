@@ -1,7 +1,7 @@
 
 \subsection{Code Syntax}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Code Syntax}
     \begin{description}
         \item[\%] Comment
@@ -19,7 +19,7 @@
 
 \subsection{\braceCommand{documentclass}}
 
-\begin{frame}
+\begin{frame}[allowframebreaks=0.8,fagile]
 \frametitle{\braceCommand{documentclass}}
     Used to define the type of document\\
     Example types of documentclass:
@@ -30,11 +30,7 @@
         \item[slides] Good for simple slides
         \item[beamer] Good for complex presentations
     \end{description}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{\braceCommand{documentclass}}
+    \framebreak
     Options:
     \begin{description}
         \item[pt] Font size. Default is 10pt. Ex: 12pt, 14pt, \ldots
@@ -96,7 +92,7 @@
 
 \subsubsection{itemize}
 
-\begin{frame}[fragile]
+\begin{frame}[allowframebreaks=0.8,fragile]
 \frametitle{itemize}
 \begin{teX}
 \begin{itemize}
@@ -108,22 +104,20 @@
     \item Another item
 \end{itemize}
 \end{teX}
-\end{frame}
-
-\begin{frame}
+\framebreak
+\begin{itemize}
+  \item This is a sample list
+  \item to show the code for an itemized list
     \begin{itemize}
-        \item This is a sample list
-        \item to show the code for an itemized list
-        \begin{itemize}
-            \item sublist
-        \end{itemize}
-        \item Another item
-   \end{itemize}
+      \item sublist
+    \end{itemize}
+  \item Another item
+\end{itemize}
 \end{frame}
 
 \subsubsection{enumerate}
 
-\begin{frame}[fragile]
+\begin{frame}[allowframebreaks=0.8,fragile]
 \frametitle{enumerate}
 \begin{teX}
 \begin{enumerate}
@@ -135,9 +129,7 @@
     \item Another item
 \end{enumerate}
 \end{teX}
-\end{frame}
-
-\begin{frame}
+\framebreak
 \frametitle{enumerate}
     \begin{enumerate}
         \item This is a sample list
@@ -151,7 +143,7 @@
 
 \subsubsection{description}
 
-\begin{frame}[fragile]
+\begin{frame}[allowframebreaks=0.8,fragile]
 \frametitle{description}
 \begin{teX}
 \begin{description}
@@ -159,9 +151,7 @@
     \item[something] This shows a second definition
 \end{description}
 \end{teX}
-\end{frame}
-
-\begin{frame}
+\framebreak
 \frametitle{description}
 \begin{description}
     \item[description] Good for definitions

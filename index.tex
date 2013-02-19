@@ -1,5 +1,10 @@
 \documentclass[compress,14pt]{beamer}
+
+%% Needed for amount of packages, I think
 \usepackage{etex}
+
+
+%% Set up beamer configuration
 \mode<presentation>
 
 \usetheme{Warsaw}
@@ -17,6 +22,7 @@
 }
 \setbeamertemplate{navigation symbols}{}%remove navigation symbols
 
+%% input packages
 \usepackage{pdfpages}
 \usepackage{subfigure}
 \usepackage{multicol}
@@ -33,6 +39,7 @@
 \usepackage{listings}
 \usepackage{verbatim}
 
+%% Used for a bettter URL style
 %% Define a new 'leo' style for the package that will use a smaller font.
 \makeatletter
 \def\url@leostyle{%
@@ -41,6 +48,7 @@
 %% Now actually use the newly defined style.
 \urlstyle{leo}
 
+%% new environment for putting LaTeX/TeX code in the document
 \lstnewenvironment{teX}[1][]
 {\lstset{language=[LaTeX]TeX}\lstset{escapeinside={(*@}{@*)},
     numbers=left,numberstyle=\normalsize,stepnumber=1,numbersep=5pt,
@@ -63,6 +71,7 @@
                                     }}
 {}
 
+%% Same as above, but for external files
 \lstset{
     language=[LaTeX]TeX,
     escapeinside={(*@}{@*)},
@@ -88,7 +97,6 @@
 
 
 % define your own colours:
-\definecolor{innotek}{RGB}{1,54,160}
 \definecolor{Red}{rgb}{1,0,0}
 \definecolor{Blue}{rgb}{0,0,1}
 \definecolor{Green}{rgb}{0,1,0}
@@ -108,13 +116,16 @@
 \xdefinecolor{olive}{cmyk}{0.64,0,0.95,0.4}
 \xdefinecolor{purpleish}{cmyk}{0.75,0.75,0,0}
 
-\useoutertheme[subsection=false]{smoothbars}
+\useoutertheme[subsection=true]{smoothbars}
 
+
+%% Custom commands for make LaTeX commands look pretty
 \def\brackets#1{[#1]}
 \def\braceCommand#1{\textbackslash #1\{\}}
 \def\command#1{\textbackslash #1}
 \def\tab{\hspace{1em}}
 
+%% Add ToC before each section
 \AtBeginSection[]{
     \begin{frame}{Outline}
         \begin{multicols}{2}
@@ -124,6 +135,7 @@
         \end{multicols}
     \end{frame} }
 
+%% Fill title page
 \title{Intro to \LaTeX }
 \subtitle{Learn to Write Basic \LaTeX{} Documents}
 \author{Kyle Timins}
@@ -132,10 +144,12 @@
 
 \begin{document}
 
+%% Create titlepage
 \begin{frame}
     \titlepage
 \end{frame}
 
+%% Create a ToC page
 \section[Outline]{}
 \begin{frame}{Outline}
     \begin{multicols}{2}
@@ -143,6 +157,7 @@
     \end{multicols}
 \end{frame}
 
+%% input external tex files
 \section{Overview}
 \input{overview}
 
